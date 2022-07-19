@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz Challenge</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="start-page" id="start">
+        <h2>Coding Quiz Challenge!</h2>
+        <h3>This quiz consists of 5 coding related questions. Answer each question before
+            the alloted time runs out. Aim for a perfect score!    
+        </h3>
+    </div>
+    <div class="container">
+        <div id="startpage">
+            <button class="button" id="start-button">Begin</button>
+            <button class="button" onclick="showHighscore()">High Scores</button>
+        </div>
+
+        <div id="quiz">
+            <div id="timer">Time left: </div>
+                <div id="questions">Questions Here</div>
+                <div class="a-button-grid">
+                    <button class="button" id="a" onclick="checkAnswer('a')">A</button>
+                    <button class="button" id="b" onclick="checkAnswer('b')">B</button>
+                    <button class="button" id="c" onclick="checkAnswer('c')">C</button>
+                    <button class="button" id="d" onclick="checkAnswer('d')">D</button>
+                </div>
+                <div id="result"></div>
+
+        </div>
+
+        <div id="gameover">
+            <div id="final-score"></div>
+            <input type="text" size = "40" placeholder="Enter your name or initials" name="intials" id="name-or-initials"/>
+            <button class="button" id="submit">Submit</button>
+        </div>
+
+        <div id=highscore-container>
+        <div id="highscore-page">
+            <div id="highscore-header">
+                <h3>Player</h3>
+                <h3>Score</h3>
+            </div>
+            <div class="initials-and-score">
+            <div id = "highscore-initials"></div>
+            <div id = "highscore-score"></div>
+            </div>
+        </div>
+
+        <div id="end-buttons">
+            <button class="button" id="play-again" onclick="replayQuiz()">Play Again</button>
+            <button class="button" onclick="clearScore()">Reset Scores</button>
+        </div>
+    </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
